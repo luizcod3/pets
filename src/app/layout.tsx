@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { AosInit } from "./_components/aos-init";
+import ScrollToTop from "./_components/scrollToTop";
 
 export const metadata: Metadata = {
   title: "Pets",
@@ -16,8 +17,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`antialiased`}>
-        {children}
+        <ScrollToTop />
         <AosInit/>
+        {children}
+       
       </body>
     </html>
   );
